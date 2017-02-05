@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bR5-bf-cni">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="W7Z-8E-zUZ">
+            <objects>
+                <tableViewController id="Ksk-Dt-8tA" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZVb-MB-VjW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="notesCell" id="WxD-iw-RqZ">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WxD-iw-RqZ" id="vok-Dq-LPd">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="ZX2-CS-rWh" kind="show" identifier="toDetailVC" id="0Fa-GW-z2L"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Ksk-Dt-8tA" id="MBL-pc-ptx"/>
+                            <outlet property="delegate" destination="Ksk-Dt-8tA" id="3bi-t5-d3J"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="igU-UF-bMf">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="9Pf-hB-AsG">
+                            <connections>
+                                <segue destination="ZX2-CS-rWh" kind="show" identifier="addToDetailVC" id="laD-16-J9y"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tm9-3a-VEZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.2" y="138.98050974512745"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="T7Q-b2-Rn5">
+            <objects>
+                <viewController id="ZX2-CS-rWh" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KCn-42-Pfv"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hlu-Ja-0Up"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Sdh-OS-LYR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lns-4g-ore">
+                                <rect key="frame" x="67" y="269" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lns-4g-ore" firstAttribute="centerY" secondItem="Sdh-OS-LYR" secondAttribute="centerY" id="A1T-wX-TOr"/>
+                            <constraint firstItem="lns-4g-ore" firstAttribute="leading" secondItem="Sdh-OS-LYR" secondAttribute="leadingMargin" constant="51" id="KRc-zR-pE9"/>
+                            <constraint firstItem="lns-4g-ore" firstAttribute="top" secondItem="KCn-42-Pfv" secondAttribute="bottom" constant="205" id="U7I-cB-5gq"/>
+                            <constraint firstItem="lns-4g-ore" firstAttribute="centerX" secondItem="Sdh-OS-LYR" secondAttribute="centerX" id="b3G-Bo-dCS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="tHA-q5-IxK">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="Z9R-yh-cDO"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fvO-UP-bav" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1926" y="139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kWg-et-z9L">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bR5-bf-cni" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="u4u-o2-Lr6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ksk-Dt-8tA" kind="relationship" relationship="rootViewController" id="Hp5-QX-z7V"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eQD-Tc-suY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="108" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="laD-16-J9y"/>
+    </inferredMetricsTieBreakers>
+</document>
