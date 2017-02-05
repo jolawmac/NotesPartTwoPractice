@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--My Notes-->
         <scene sceneID="W7Z-8E-zUZ">
             <objects>
                 <tableViewController id="Ksk-Dt-8tA" sceneMemberID="viewController">
@@ -19,12 +19,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="notesCell" id="WxD-iw-RqZ">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="notesCell" textLabel="Q59-Ub-pHN" style="IBUITableViewCellStyleDefault" id="WxD-iw-RqZ">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WxD-iw-RqZ" id="vok-Dq-LPd">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Q59-Ub-pHN">
+                                            <rect key="frame" x="15" y="0.0" width="345" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <segue destination="ZX2-CS-rWh" kind="show" identifier="toDetailVC" id="0Fa-GW-z2L"/>
@@ -36,7 +45,7 @@
                             <outlet property="delegate" destination="Ksk-Dt-8tA" id="3bi-t5-d3J"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="igU-UF-bMf">
+                    <navigationItem key="navigationItem" title="My Notes" id="igU-UF-bMf">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="9Pf-hB-AsG">
                             <connections>
                                 <segue destination="ZX2-CS-rWh" kind="show" identifier="addToDetailVC" id="laD-16-J9y"/>
@@ -68,7 +77,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="lns-4g-ore" firstAttribute="centerY" secondItem="Sdh-OS-LYR" secondAttribute="centerY" id="A1T-wX-TOr"/>
                             <constraint firstItem="lns-4g-ore" firstAttribute="leading" secondItem="Sdh-OS-LYR" secondAttribute="leadingMargin" constant="51" id="KRc-zR-pE9"/>
@@ -104,6 +113,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="laD-16-J9y"/>
+        <segue reference="0Fa-GW-z2L"/>
     </inferredMetricsTieBreakers>
 </document>
